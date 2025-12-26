@@ -1,0 +1,1208 @@
+{
+  "base_url": "http://127.0.0.1/dvwa",
+  "pages": [
+    {
+      "url": "http://127.0.0.1/dvwa/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/.",
+        "http://127.0.0.1/dvwa/instructions.php",
+        "http://127.0.0.1/dvwa/setup.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/security.php",
+        "http://127.0.0.1/dvwa/phpinfo.php",
+        "http://127.0.0.1/dvwa/about.php",
+        "http://127.0.0.1/dvwa/logout.php",
+        "https://www.virtualbox.org/",
+        "https://www.vmware.com/",
+        "https://www.apachefriends.org/",
+        "https://github.com/webpwnized/mutillidae",
+        "https://owasp.org/www-project-broken-web-applications/migrated_content"
+      ],
+      "forms": []
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/instructions.php",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/.",
+        "http://127.0.0.1/dvwa/instructions.php",
+        "http://127.0.0.1/dvwa/setup.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/security.php",
+        "http://127.0.0.1/dvwa/phpinfo.php",
+        "http://127.0.0.1/dvwa/about.php",
+        "http://127.0.0.1/dvwa/logout.php",
+        "http://127.0.0.1/dvwa/?doc=readme",
+        "http://127.0.0.1/dvwa/?doc=PDF",
+        "http://127.0.0.1/dvwa/?doc=changelog",
+        "http://127.0.0.1/dvwa/?doc=copying",
+        "https://www.virtualbox.org/",
+        "https://www.vmware.com/",
+        "https://www.apachefriends.org/",
+        "https://www.gnu.org/licenses/",
+        "http://127.0.0.1/dvwa/README.ar.md",
+        "http://127.0.0.1/dvwa/README.zh.md",
+        "http://127.0.0.1/dvwa/README.fr.md",
+        "http://127.0.0.1/dvwa/README.fa.md",
+        "http://127.0.0.1/dvwa/README.es.md",
+        "http://127.0.0.1/dvwa/README.tr.md",
+        "https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes",
+        "https://github.com/digininja/DVWA/archive/master.zip",
+        "https://www.youtube.com/watch?v=WkyDxNJkgQ4",
+        "https://youtu.be/Yzksa_WjnY0",
+        "https://www.youtube.com/watch?v=cak2lQvBRAo",
+        "https://www.howtogeek.com/205086/beginner-how-to-make-windows-show-file-extensions/",
+        "https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-include",
+        "https://secure.php.net/manual/en/filesystem.configuration.php#ini.allow-url-fopen",
+        "https://secure.php.net/manual/en/errorfunc.configuration.php#ini.display-errors",
+        "https://www.google.com/recaptcha/admin/create",
+        "http://127.0.0.1/login.php",
+        "https://hub.docker.com/r/vulnerables/web-dvwa/",
+        "http://127.0.0.1/dvwa/#database-setup",
+        "https://mariadb.com/resources/blog/how-to-migrate-from-mysql-to-mariadb-on-linux-in-five-steps/",
+        "https://www.php.net/manual/en/mysqli.requirements.php",
+        "https://www.ryadel.com/en/fix-mysql-server-gone-away-packets-order-similar-mysql-related-errors/",
+        "https://github.com/digininja/DVWA/issues",
+        "https://youtu.be/V4MATqtdxss",
+        "https://github.com/digininja/DVWA/graphs/contributors",
+        "https://github.com/digininja/DVWA"
+      ],
+      "forms": []
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/setup.php",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/.",
+        "http://127.0.0.1/dvwa/instructions.php",
+        "http://127.0.0.1/dvwa/setup.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/security.php",
+        "http://127.0.0.1/dvwa/phpinfo.php",
+        "http://127.0.0.1/dvwa/about.php",
+        "http://127.0.0.1/dvwa/logout.php"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "create_db",
+              "type": "submit",
+              "value": "Create / Reset Database",
+              "placeholder": ""
+            },
+            {
+              "name": "user_token",
+              "type": "hidden",
+              "value": "0983102d58ec95a0e958d8dd7cd29f02",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://owasp.org/www-community/attacks/Brute_force_attack",
+        "http://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-password",
+        "http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in-windows.html"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "GET",
+          "inputs": [
+            {
+              "name": "username",
+              "type": "text",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "password",
+              "type": "password",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "Login",
+              "type": "submit",
+              "value": "Login",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://www.scribd.com/doc/2530476/Php-Endangers-Remote-Code-Execution",
+        "http://www.ss64.com/bash/",
+        "http://www.ss64.com/nt/",
+        "https://owasp.org/www-community/attacks/Command_Injection"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "ip",
+              "type": "text",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "Submit",
+              "type": "submit",
+              "value": "Submit",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://web.dev/samesite-cookies-explained/",
+        "https://chromestatus.com/feature/5088147346030592",
+        "https://docs.microsoft.com/en-us/microsoft-edge/web-platform/site-impacting-changes",
+        "https://hacks.mozilla.org/2020/08/changes-to-samesite-cookie-behavior/",
+        "https://owasp.org/www-community/attacks/csrf",
+        "http://www.cgisecurity.com/csrf-faq.html",
+        "https://en.wikipedia.org/wiki/Cross-site_request_forgery "
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "GET",
+          "inputs": [
+            {
+              "name": "password_new",
+              "type": "password",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "password_conf",
+              "type": "password",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "Change",
+              "type": "submit",
+              "value": "Change",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/fi/.?page=include.php",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "http://127.0.0.1/dvwa/?page=file1.php",
+        "http://127.0.0.1/dvwa/?page=file2.php",
+        "http://127.0.0.1/dvwa/?page=file3.php",
+        "https://en.wikipedia.org/wiki/Remote_File_Inclusion",
+        "https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion",
+        "https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion"
+      ],
+      "forms": []
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload",
+        "https://www.acunetix.com/websitesecurity/upload-forms-threat/"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "MAX_FILE_SIZE",
+              "type": "hidden",
+              "value": "100000",
+              "placeholder": ""
+            },
+            {
+              "name": "uploaded",
+              "type": "file",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "Upload",
+              "type": "submit",
+              "value": "Upload",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://en.wikipedia.org/wiki/CAPTCHA",
+        "https://www.google.com/recaptcha/",
+        "https://owasp.org/www-project-automated-threats-to-web-applications/assets/oats/EN/OAT-009_CAPTCHA_Defeat"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "step",
+              "type": "hidden",
+              "value": "1",
+              "placeholder": ""
+            },
+            {
+              "name": "password_new",
+              "type": "password",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "password_conf",
+              "type": "password",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "Change",
+              "type": "submit",
+              "value": "Change",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://en.wikipedia.org/wiki/SQL_injection",
+        "https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/",
+        "https://owasp.org/www-community/attacks/SQL_Injection",
+        "https://bobby-tables.com/"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "GET",
+          "inputs": [
+            {
+              "name": "id",
+              "type": "text",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "Submit",
+              "type": "submit",
+              "value": "Submit",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://en.wikipedia.org/wiki/SQL_injection",
+        "http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet",
+        "https://owasp.org/www-community/attacks/Blind_SQL_Injection",
+        "https://bobby-tables.com/"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "GET",
+          "inputs": [
+            {
+              "name": "id",
+              "type": "text",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "Submit",
+              "type": "submit",
+              "value": "Submit",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php"
+      ],
+      "forms": [
+        {
+          "action": "",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "",
+              "type": "submit",
+              "value": "Generate",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://owasp.org/www-community/attacks/xss/",
+        "https://owasp.org/www-community/attacks/DOM_Based_XSS",
+        "https://www.acunetix.com/blog/articles/dom-xss-explained/"
+      ],
+      "forms": [
+        {
+          "action": "",
+          "method": "GET",
+          "inputs": [
+            {
+              "name": "default",
+              "type": "select",
+              "value": "",
+              "placeholder": "",
+              "options": [
+                {
+                  "value": "English",
+                  "text": "English",
+                  "selected": false
+                },
+                {
+                  "value": "French",
+                  "text": "French",
+                  "selected": false
+                },
+                {
+                  "value": "Spanish",
+                  "text": "Spanish",
+                  "selected": false
+                },
+                {
+                  "value": "German",
+                  "text": "German",
+                  "selected": false
+                }
+              ]
+            },
+            {
+              "name": "",
+              "type": "submit",
+              "value": "Select",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://owasp.org/www-community/attacks/xss/",
+        "https://owasp.org/www-community/xss-filter-evasion-cheatsheet",
+        "https://en.wikipedia.org/wiki/Cross-site_scripting",
+        "http://www.cgisecurity.com/xss-faq.html",
+        "http://www.scriptalert1.com/"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "GET",
+          "inputs": [
+            {
+              "name": "name",
+              "type": "text",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "",
+              "type": "submit",
+              "value": "Submit",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://owasp.org/www-community/attacks/xss",
+        "https://owasp.org/www-community/xss-filter-evasion-cheatsheet",
+        "https://en.wikipedia.org/wiki/Cross-site_scripting",
+        "http://www.cgisecurity.com/xss-faq.html",
+        "http://www.scriptalert1.com/"
+      ],
+      "forms": [
+        {
+          "action": "",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "txtName",
+              "type": "text",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "mtxMessage",
+              "type": "textarea",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "btnSign",
+              "type": "submit",
+              "value": "Sign Guestbook",
+              "placeholder": ""
+            },
+            {
+              "name": "btnClear",
+              "type": "submit",
+              "value": "Clear Guestbook",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://content-security-policy.com/",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP",
+        "https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/",
+        "https://twitter.com/digininja"
+      ],
+      "forms": [
+        {
+          "action": "",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "include",
+              "type": "text",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "",
+              "type": "submit",
+              "value": "Include",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "https://www.w3schools.com/js/",
+        "https://www.youtube.com/watch?v=cs7EQdWO5o0&index=17&list=WL",
+        "https://ponyfoo.com/articles/es6-proxies-in-depth",
+        "https://twitter.com/digininja"
+      ],
+      "forms": [
+        {
+          "action": "",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "token",
+              "type": "hidden",
+              "value": "8b479aefbd90795395b3e7089ae0dc09",
+              "placeholder": ""
+            },
+            {
+              "name": "phrase",
+              "type": "text",
+              "value": "ChangeMe",
+              "placeholder": ""
+            },
+            {
+              "name": "send",
+              "type": "submit",
+              "value": "Submit",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php"
+      ],
+      "forms": []
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/../../.",
+        "http://127.0.0.1/dvwa/../../instructions.php",
+        "http://127.0.0.1/dvwa/../../setup.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/../../vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/../../security.php",
+        "http://127.0.0.1/dvwa/../../phpinfo.php",
+        "http://127.0.0.1/dvwa/../../about.php",
+        "http://127.0.0.1/dvwa/../../logout.php",
+        "http://127.0.0.1/dvwa/source/low.php?redirect=info.php?id=1",
+        "http://127.0.0.1/dvwa/source/low.php?redirect=info.php?id=2",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html",
+        "https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-side_Testing/04-Testing_for_Client-side_URL_Redirect",
+        "https://cwe.mitre.org/data/definitions/601.html"
+      ],
+      "forms": []
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/security.php",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/.",
+        "http://127.0.0.1/dvwa/instructions.php",
+        "http://127.0.0.1/dvwa/setup.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/security.php",
+        "http://127.0.0.1/dvwa/phpinfo.php",
+        "http://127.0.0.1/dvwa/about.php",
+        "http://127.0.0.1/dvwa/logout.php"
+      ],
+      "forms": [
+        {
+          "action": "#",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "security",
+              "type": "select",
+              "value": "",
+              "placeholder": "",
+              "options": [
+                {
+                  "value": "low",
+                  "text": "Low",
+                  "selected": true
+                },
+                {
+                  "value": "medium",
+                  "text": "Medium",
+                  "selected": false
+                },
+                {
+                  "value": "high",
+                  "text": "High",
+                  "selected": false
+                },
+                {
+                  "value": "impossible",
+                  "text": "Impossible",
+                  "selected": false
+                }
+              ]
+            },
+            {
+              "name": "seclev_submit",
+              "type": "submit",
+              "value": "Submit",
+              "placeholder": ""
+            },
+            {
+              "name": "user_token",
+              "type": "hidden",
+              "value": "4feb59e92079f78e8f758d4ebe61c6d4",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/phpinfo.php",
+      "level": "low",
+      "anchors": [
+        "https://www.php.net/",
+        "https://www.zend.com/",
+        "http://127.0.0.1/dvwa/#module_apache2handler",
+        "http://127.0.0.1/dvwa/#module_calendar",
+        "http://127.0.0.1/dvwa/#module_core",
+        "http://127.0.0.1/dvwa/#module_ctype",
+        "http://127.0.0.1/dvwa/#module_date",
+        "http://127.0.0.1/dvwa/#module_exif",
+        "http://127.0.0.1/dvwa/#module_ffi",
+        "http://127.0.0.1/dvwa/#module_fileinfo",
+        "http://127.0.0.1/dvwa/#module_filter",
+        "http://127.0.0.1/dvwa/#module_ftp",
+        "http://127.0.0.1/dvwa/#module_gd",
+        "http://127.0.0.1/dvwa/#module_gettext",
+        "http://127.0.0.1/dvwa/#module_hash",
+        "http://127.0.0.1/dvwa/#module_iconv",
+        "http://127.0.0.1/dvwa/#module_json",
+        "http://127.0.0.1/dvwa/#module_libxml",
+        "http://127.0.0.1/dvwa/#module_mysqli",
+        "http://127.0.0.1/dvwa/#module_mysqlnd",
+        "http://127.0.0.1/dvwa/#module_openssl",
+        "http://127.0.0.1/dvwa/#module_pcre",
+        "http://127.0.0.1/dvwa/#module_pdo",
+        "http://127.0.0.1/dvwa/#module_pdo_mysql",
+        "http://127.0.0.1/dvwa/#module_phar",
+        "http://127.0.0.1/dvwa/#module_posix",
+        "http://127.0.0.1/dvwa/#module_random",
+        "http://127.0.0.1/dvwa/#module_readline",
+        "http://127.0.0.1/dvwa/#module_reflection",
+        "http://127.0.0.1/dvwa/#module_session",
+        "http://127.0.0.1/dvwa/#module_shmop",
+        "http://127.0.0.1/dvwa/#module_sockets",
+        "http://127.0.0.1/dvwa/#module_sodium",
+        "http://127.0.0.1/dvwa/#module_spl",
+        "http://127.0.0.1/dvwa/#module_standard",
+        "http://127.0.0.1/dvwa/#module_sysvmsg",
+        "http://127.0.0.1/dvwa/#module_sysvsem",
+        "http://127.0.0.1/dvwa/#module_sysvshm",
+        "http://127.0.0.1/dvwa/#module_tokenizer",
+        "http://127.0.0.1/dvwa/#module_zend+opcache",
+        "http://127.0.0.1/dvwa/#module_zlib"
+      ],
+      "forms": []
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/about.php",
+      "level": "low",
+      "anchors": [
+        "http://127.0.0.1/dvwa/.",
+        "http://127.0.0.1/dvwa/instructions.php",
+        "http://127.0.0.1/dvwa/setup.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/brute/",
+        "http://127.0.0.1/dvwa/vulnerabilities/exec/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csrf/",
+        "http://127.0.0.1/dvwa/vulnerabilities/fi/.?page=include.php",
+        "http://127.0.0.1/dvwa/vulnerabilities/upload/",
+        "http://127.0.0.1/dvwa/vulnerabilities/captcha/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli/",
+        "http://127.0.0.1/dvwa/vulnerabilities/sqli_blind/",
+        "http://127.0.0.1/dvwa/vulnerabilities/weak_id/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_d/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_r/",
+        "http://127.0.0.1/dvwa/vulnerabilities/xss_s/",
+        "http://127.0.0.1/dvwa/vulnerabilities/csp/",
+        "http://127.0.0.1/dvwa/vulnerabilities/javascript/",
+        "http://127.0.0.1/dvwa/vulnerabilities/authbypass/",
+        "http://127.0.0.1/dvwa/vulnerabilities/open_redirect/",
+        "http://127.0.0.1/dvwa/security.php",
+        "http://127.0.0.1/dvwa/phpinfo.php",
+        "http://127.0.0.1/dvwa/about.php",
+        "http://127.0.0.1/dvwa/logout.php",
+        "https://github.com/digininja/DVWA",
+        "https://github.com/digininja/DVWA/issues",
+        "https://github.com/digininja/DVWA/wiki",
+        "http://brooksgarrett.com/",
+        "https://blog.g0tmi1k.com/",
+        "https://www.creativenucleus.com/",
+        "https://wpscan.com/",
+        "http://www.paulosyibelo.com/",
+        "http://tedi.heriyanto.net/",
+        "https://digi.ninja/",
+        "https://github.com/songzy12/"
+      ],
+      "forms": []
+    },
+    {
+      "url": "http://127.0.0.1/dvwa/logout.php",
+      "level": "low",
+      "anchors": [
+        "https://github.com/digininja/DVWA/"
+      ],
+      "forms": [
+        {
+          "action": "login.php",
+          "method": "POST",
+          "inputs": [
+            {
+              "name": "username",
+              "type": "text",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "password",
+              "type": "password",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "name": "Login",
+              "type": "submit",
+              "value": "Login",
+              "placeholder": ""
+            },
+            {
+              "name": "user_token",
+              "type": "hidden",
+              "value": "2c7ee041386ae42df265ccfa45d69c53",
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
