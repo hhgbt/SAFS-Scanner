@@ -1,0 +1,17 @@
+# SAFS-Scanner Payloads (Mixed)
+# Benign
+test_safe_1
+1
+0
+# SQLi
+' OR 1=1 -- 
+' UNION SELECT 1,2,3 -- 
+admin' --
+# XSS
+<script>alert(1)</script>
+"><img src=x onerror=alert(1)>
+# CMDi
+; ls -la
+| cat /etc/passwd
+# Path Traversal
+../../../../etc/passwd
