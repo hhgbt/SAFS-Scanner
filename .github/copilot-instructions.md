@@ -58,7 +58,7 @@ python core/spider.py --base http://127.0.0.1/dvwa --dvwa --cookie "PHPSESSID=xx
 修改建议（按优先级）
 - 适配新靶场：优先新增派生 Spider，复用 `UniversalSpider` 的 BFS/指纹逻辑，避免在核心类里塞特定站点逻辑。
 - 输出扩展：若需更多上下文（标题、headers、响应体摘要），在 `UniversalSpider.find_injection_points` 或 `get_page_fingerprint` 中追加字段。
-- 扫描参数：在 [main.py](main.py) 补充 CLI 选项，传递到 `SAFSPredictScanner.scan_url`，保持默认值与 README 一致。
+- 扫描参数：在 [main.py](main.py) 补充 CLI 选项，传递到 `VAPFPredictScanner.scan_url`，保持默认值与 README 一致。
 
 参考文件
 - CLI 与流程：[main.py](main.py)

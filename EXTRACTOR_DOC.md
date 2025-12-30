@@ -55,7 +55,7 @@
 ### `FeatureExtractor`
 
 -   **`__init__(payloads_file)`**:
-    -   加载 Payload，初始化 `SAFSMutator`，并执行 Payload 扩充。
+    -   加载 Payload，初始化 `VAPFMutator`，并执行 Payload 扩充。
 -   **`fetch_page_features(page, url, method, data)`**:
     -   核心网络请求方法。
     -   使用 Playwright 发送请求（自动处理 GET Query 参数）。

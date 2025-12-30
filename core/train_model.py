@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 import os
 
-class SAFSTrainer:
+class VAPFTrainer:
     """
     V-APF AI 训练引擎
     功能：
@@ -99,7 +99,7 @@ class SAFSTrainer:
         for f in range(X_train.shape[1]):
             print(f"{f+1}. {feature_names[indices[f]]}: {importances[indices[f]]:.4f}")
 
-    def save(self, model_path="models/safs_rf_model.pkl", scaler_path="models/scaler.pkl"):
+    def save(self, model_path="models/vapf_rf_model.pkl", scaler_path="models/scaler.pkl"):
         os.makedirs("models", exist_ok=True)
         joblib.dump(self.model, model_path)
         joblib.dump(self.scaler, scaler_path)
@@ -107,6 +107,6 @@ class SAFSTrainer:
         print(f"[+] 预处理器已产出: {scaler_path}")
 
 if __name__ == "__main__":
-    trainer = SAFSTrainer("data/train_dataset.csv")
+    trainer = VAPFTrainer("data/train_dataset.csv")
     trainer.train()
     trainer.save()

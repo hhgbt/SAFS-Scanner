@@ -44,7 +44,7 @@ flowchart LR
     C[extractor.py<br/><small>特征提取</small>]
     D[auto_labeler.py<br/><small>自动打标</small>]
     E[train_model.py<br/><small>模型训练</small>]
-    F[模型文件<br/>safs_rf_model.pkl]
+    F[模型文件<br/>vapf_rf_model.pkl]
     A --> B --> C --> D --> E --> F
   end
 
@@ -69,7 +69,7 @@ flowchart LR
 ```
 python main.py train
 ```
-默认读取 data/targets_dvwa.json、data/targets_bwapp.json、data/targets_pikachu.json，生成 data/features_all.json、data/train_dataset.csv，并在 models/ 下产出 safs_rf_model.pkl 和 scaler.pkl。
+默认读取 data/targets_dvwa.json、data/targets_bwapp.json、data/targets_pikachu.json，生成 data/features_all.json、data/train_dataset.csv，并在 models/ 下产出 vapf_rf_model.pkl 和 scaler.pkl。
 
 3) 实时扫描并生成报告
 ```

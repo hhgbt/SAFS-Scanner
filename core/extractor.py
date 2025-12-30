@@ -23,7 +23,7 @@ import random
 sys.path.append(os.getcwd())
 from playwright.async_api import async_playwright, Page, BrowserContext
 from core.spider import DVWASpider, BWAPPSpider, PikachuSpider, UniversalSpider
-from core.mutator import SAFSMutator
+from core.mutator import VAPFMutator
 
 class FeatureExtractor:
     """
@@ -38,7 +38,7 @@ class FeatureExtractor:
 
     def __init__(self, payloads_file: str = "data/payloads.txt", cookies: str = "", default_headers: Dict[str, str] | None = None):
         self.payloads = self._load_payloads(payloads_file)
-        self.mutator = SAFSMutator()
+        self.mutator = VAPFMutator()
         self.cookies = cookies
         self.default_headers = default_headers or {}
         # [Optimization] 预先生成变异 Payload，扩充攻击向量库

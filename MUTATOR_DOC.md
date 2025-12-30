@@ -13,19 +13,19 @@
 
 ## 实现细节
 
-### 核心类 `SAFSMutator`
+### 核心类 `VAPFMutator`
 
 * `mutate(self, base_payload, count=3)`：
     * 基于关键词粗分类 SQLi/XSS/通用，选择对应策略随机生成变体；默认返回原始载荷 + 至多 `count` 个新变体。
     * 使用 `set` 去重，最多尝试 `count*10` 次；有 30% 概率基于已有变体做二阶变换。
-* 兼容别名：`PayloadMutator = SAFSMutator`（供旧代码引用）。
+* 兼容别名：`PayloadMutator = VAPFMutator`。
 
 ## 使用示例
 
 ```python
-from core.mutator import SAFSMutator
+from core.mutator import VAPFMutator
 
-mutator = SAFSMutator()
+mutator = VAPFMutator()
 original_payload = "' OR 1=1 -- "
 
 print(f"Original: {original_payload}")

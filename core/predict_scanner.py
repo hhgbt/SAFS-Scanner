@@ -14,7 +14,7 @@ from urllib.parse import urlparse, parse_qs
 sys.path.append(os.getcwd())
 
 from core.extractor import FeatureExtractor
-from core.mutator import SAFSMutator
+from core.mutator import VAPFMutator
 from core.exploit_engine import run_sqlmap, run_beef_xss, run_commix, run_msfconsole_cmd
 from playwright.async_api import async_playwright
 from sklearn.preprocessing import MinMaxScaler
@@ -22,14 +22,14 @@ from sklearn.preprocessing import MinMaxScaler
 DEFAULT_THRESHOLD = 0.65
 FEATURE_NAMES = [f"v{i+1}" for i in range(13)]
 
-class SAFSPredictScanner:
-    def __init__(self, model_path="models/safs_rf_model.pkl", scaler_path="models/scaler.pkl", default_headers=None):
+class VAPFPredictScanner:
+    def __init__(self, model_path="models/vapf_rf_model.pkl", scaler_path="models/scaler.pkl", default_headers=None):
         print("[*] 正在加载 V-APF AI 引擎...")
         self.model = joblib.load(model_path)
         self.scaler = joblib.load(scaler_path)
         # 实例化提取器，仅用于复用它的 compute_13_vector 逻辑
         self.extractor = FeatureExtractor(default_headers=default_headers)
-        self.mutator = SAFSMutator() # 实例化变异引擎
+        self.mutator = VAPFMutator() # 实例化变异引擎
         self.final_results = [] # 新增：用于存储所有探测结果
         # 运行期配置在 scan_url 中设置
         self.sem = None
@@ -659,7 +659,7 @@ if __name__ == "__main__":
                 headers_dict[k.strip()] = v.strip()
     headers_dict = headers_dict or None
 
-    scanner = SAFSPredictScanner(default_headers=headers_dict)
+    scanner = VAPFPredictScanner(default_headers=headers_dict)
     asyncio.run(
         scanner.scan_url(
             args.url,

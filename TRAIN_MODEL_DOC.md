@@ -31,7 +31,7 @@
 
 ### 5. 模型持久化 (Serialization)
 训练好的模型和预处理器会被保存为二进制文件：
-- `models/safs_rf_model.pkl`: 随机森林模型。
+- `models/vapf_rf_model.pkl`: 随机森林模型。
 - `models/scaler.pkl`: 标准化器（推理侧同样以 numpy 输入，避免特征名告警）。
 
 ## 使用方法
@@ -52,7 +52,7 @@ python main.py train
 ## 依赖关系
 
 - **Input**: `data/train_dataset.csv` (由 `auto_labeler.py` 生成)。
-- **Output**: `models/safs_rf_model.pkl`, `models/scaler.pkl`.
+- **Output**: `models/vapf_rf_model.pkl`, `models/scaler.pkl`.
 - **Libraries**: `scikit-learn`, `pandas`, `numpy`, `joblib`.
 
 

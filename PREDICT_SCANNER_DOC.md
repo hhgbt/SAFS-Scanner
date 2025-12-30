@@ -5,10 +5,10 @@
 ## 功能概览
 
 该模块主要完成以下任务：
-1.  **AI 引擎加载**: 初始化随机森林模型 (`models/safs_rf_model.pkl`) 和标准化器 (`models/scaler.pkl`)，特征工程与训练侧一致。
+1.  **AI 引擎加载**: 初始化随机森林模型 (`models/vapf_rf_model.pkl`) 和标准化器 (`models/scaler.pkl`)，特征工程与训练侧一致。
 2.  **基准建立 (Baselining)**: 获取目标页面的正常响应作为比对基准，记录基线状态码。
 3.  **智能探测 (Intelligent Probing)**:
-    -   结合 `SAFSMutator` 生成变异 Payload（默认每个基础 Payload 生成 1 个变体，可用 `--mutation-count` 调整）。
+    -   结合 `VAPFMutator` 生成变异 Payload（默认每个基础 Payload 生成 1 个变体，可用 `--mutation-count` 调整）。
     -   利用 `FeatureExtractor` 提取每次探测的 13 维特征向量。
 4.  **实时推理 (Real-time Inference)**: 标准化后送入模型，执行“反射/弱信号降噪”封顶（反射-only 上限 0.50，弱信号上限 0.55；SQL/CMD/XSS 形态可旁路）。
 5.  **并发与限流**: `asyncio.Semaphore(concurrency)` 控制探测并发（默认 3）；`--max-payloads` 截断基础 Payload；`--mutation-count` 控制变异数。
@@ -34,10 +34,10 @@
 
 ## 关键类与方法
 
-### `SAFSPredictScanner`
+### `VAPFPredictScanner`（V-APF 预测引擎主类）
 
 -   **`__init__(model_path, scaler_path)`**:
-    -   加载模型与标准化器；初始化 `FeatureExtractor` 与 `SAFSMutator`。
+    -   加载模型与标准化器；初始化 `FeatureExtractor` 与 `VAPFMutator`。
     -   自动利用串行队列 `exploit_sem=1`，探测并发在 `scan_url` 中按 `concurrency` 配置。
 
 -   **`scan_url(target_url, method, params, scan_mode, threshold, headless=True, max_payloads=None, concurrency=3, mutation_count=1, ... )`**:
@@ -80,10 +80,10 @@
 
 ```python
 import asyncio
-from core.predict_scanner import SAFSPredictScanner
+from core.predict_scanner import VAPFPredictScanner
 
 async def main():
-    scanner = SAFSPredictScanner()
+    scanner = VAPFPredictScanner()
     await scanner.scan_url(
         "http://127.0.0.1/pikachu/vul/sqli/sqli_str.php?name=test&submit=submit",
         scan_mode="single",

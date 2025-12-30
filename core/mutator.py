@@ -2,7 +2,7 @@ import random
 import urllib.parse
 import re
 
-class SAFSMutator:
+class VAPFMutator:
     """
     V-APF 高级变异引擎
     功能：根据漏洞类型 (SQLi, XSS, Generic) 进行针对性的 Payload 混淆与变异。
@@ -75,12 +75,11 @@ class SAFSMutator:
             
         return list(mutants)
 
-# 兼容旧代码引用，虽然建议更新调用方
-PayloadMutator = SAFSMutator
+PayloadMutator = VAPFMutator
 
 if __name__ == "__main__":
     # 测试代码
-    mutator = SAFSMutator()
+    mutator = VAPFMutator()
     
     sqli_payload = "' OR 1=1 --"
     print(f"\n[SQLi Test] Base: {sqli_payload}")

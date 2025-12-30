@@ -6,8 +6,8 @@ from typing import List
 
 from core.auto_labeler import AutoLabeler
 from core.extractor import FeatureExtractor
-from core.predict_scanner import SAFSPredictScanner
-from core.train_model import SAFSTrainer
+from core.predict_scanner import VAPFPredictScanner
+from core.train_model import VAPFTrainer
 
 
 def merge_features(feature_files: List[str], output_path: str = "data/features_all.json"):
@@ -57,7 +57,7 @@ def run_training(target_files: List[str]):
     labeler.process("data/train_dataset.csv")
 
     print("\n=== [训练] 训练 RandomForest 并保存模型 ===")
-    trainer = SAFSTrainer("data/train_dataset.csv")
+    trainer = VAPFTrainer("data/train_dataset.csv")
     trainer.train()
     trainer.save()
 
@@ -92,7 +92,7 @@ def run_scan(
         mutation_count = max(mutation_count, 2)
     else:
         scan_mode_effective = scan_mode
-    scanner = SAFSPredictScanner(default_headers=headers)
+    scanner = VAPFPredictScanner(default_headers=headers)
     print("\n=== [扫描] 轻量首轮 ===")
     asyncio.run(scanner.scan_url(
         url,
@@ -124,7 +124,7 @@ def run_scan(
             print("\n=== [深度复验] 发现 CRITICAL，启动二次扫描 ===")
             deep_mode_effective = "combo" if deep_mode == "brute" else deep_mode
             deep_mutation_count = max(mutation_count, 2) if deep_mode == "brute" else mutation_count
-            deep_scanner = SAFSPredictScanner(default_headers=headers)
+            deep_scanner = VAPFPredictScanner(default_headers=headers)
             deep_suffix = "deep" if report_name else None
             asyncio.run(deep_scanner.scan_url(
                 url,
@@ -154,7 +154,7 @@ def run_scan(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="SAFS-Scanner 一键集成 CLI")
+    parser = argparse.ArgumentParser(description="V-APF 一键集成 CLI")
     sub = parser.add_subparsers(dest="command", required=True)
 
     p_train = sub.add_parser("train", help="训练模式：爬取/提取/打标/训练一条龙")

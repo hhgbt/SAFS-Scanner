@@ -11,28 +11,26 @@
 ## 核心特性
 
 ### 1. 交互式数据可视化
-报告首页包含一个由 **Chart.js** 驱动的环形图（Doughnut Chart），直观展示风险分布，基于“有效置信度 prob_effective”分桶：
+首页使用 **Chart.js** 环形图展示风险分布，按“有效置信度 prob_effective”分桶：
 -   **Critical**: prob_effective ≥ 0.65（可调 `critical_threshold`）。
 -   **Suspicious**: 0.4 ≤ prob_effective < 阈值。
 -   **Safe**: prob_effective < 0.4。
 
 ### 2. 智能修复建议 (Remediation)
-采用 **特征向量优先 + 工具证据 + 关键词回退** 的策略生成修复建议：
--   特征优先：延迟/报错/反射信号直接驱动 SQLi/XSS/盲注建议。
--   证据增强：sqlmap/xsstrike/beef 等利用成功会覆盖为对应修复提示。
--   关键词回退：仅在缺乏信号时按 payload 形态兜底。
+采用 **特征向量优先 + 工具证据 + 关键词回退** 的策略：
+-   特征优先：延迟/报错/反射信号驱动 SQLi/XSS/盲注建议。
+-   证据增强：sqlmap/BeEF/Commix 等成功利用会覆盖对应建议。
+-   关键词回退：缺乏信号时按 payload 形态兜底。
 
-### 3. 智能快照截取 (Smart Snapshot)
-报告中的 **Probe Snapshot** 具有智能截取：
--   若探测响应含原始 payload，则高亮并截取前后 100 字符。
--   如未反射但出现错误关键词，优先截取包含错误片段并高亮命中词；否则截取前 500 字符。
--   无可用文本时显示回退提示 `FALLBACK_SNAPSHOT_MSG`。
+### 3. 去重与降噪
+-   以 `url+param+归一化payload` 去重，保留更高置信度一条。
+-   反射-only/弱信号在无错误且延迟低时将 prob_effective 封顶（0.50/0.55），降低误报。
 
 ### 4. AI 判定依据解释 (Explainability)
-报告通过 `_analyze_reason` 基于 13 维向量输出判定理由（延迟>2s、报错关键词、反射信号等），避免“无反射却声称 XSS”类误导。
+`_analyze_reason` 基于 13 维向量输出判定理由（延迟>2s、报错关键词、反射信号等），避免“无反射却声称 XSS”类误导。
 
-### 4. 响应快照对比 (Snapshot)
-HTML 报告内含 Base/Probe 片段与证据、利用尝试摘要，PDF 版本同样汇总成功/失败利用并保留特征指纹与修复建议。
+### 5. 利用摘要
+HTML/PDF 报告包含自动利用的成功/失败摘要、降噪标记与特征指纹，便于复核。
 
 ## 报告格式详解
 

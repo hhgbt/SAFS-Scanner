@@ -61,7 +61,7 @@ V-APF 是一款**机器学习驱动**的自动化 Web 安全检测框架。通�
 2. 提取：FeatureExtractor 逐目标探测，保存 data/features_*.json。
 3. 合并：生成 data/features_all.json。
 4. 打标：AutoLabeler 生成 data/train_dataset.csv（无害 payload 强制 0）。
-5. 训练：SAFSTrainer 产出 models/safs_rf_model.pkl 与 models/scaler.pkl。
+5. 训练：VAPFTrainer 产出 models/vapf_rf_model.pkl 与 models/scaler.pkl。
 
 ### 4.2 预测扫描（scan 模式）
 
