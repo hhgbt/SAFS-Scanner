@@ -1,0 +1,148 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>SAFS-Scanner AI 渗透报告</title>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; color: #333; margin: 0; padding: 20px; }
+                .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+                h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; border-bottom: 2px solid #ecf0f1; padding-bottom: 15px; }
+                .summary { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #34495e; color: #fff; border-radius: 8px; margin-bottom: 30px; }
+                .summary-stats { flex: 1; display: flex; justify-content: space-around; }
+                .summary-item { text-align: center; }
+                .summary-count { font-size: 24px; font-weight: bold; margin-top: 5px; }
+                .chart-container { width: 300px; height: 150px; margin-left: 20px; }
+                
+                .vulnerability { border-left: 5px solid #e74c3c; margin: 20px 0; padding: 20px; background: #fff; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.2s; }
+                .vulnerability:hover { transform: translateX(5px); }
+                .vuln-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+                .vuln-url { font-weight: bold; font-size: 1.1em; color: #2980b9; word-break: break-all; }
+                .level-critical { color: #c0392b; font-weight: bold; padding: 4px 8px; background: #fadbd8; border-radius: 4px; }
+                .level-suspicious { color: #d35400; font-weight: bold; padding: 4px 8px; background: #fdebd0; border-radius: 4px; }
+                .detail-row { margin: 8px 0; display: flex; }
+                .detail-label { width: 80px; font-weight: bold; color: #7f8c8d; }
+                .detail-content { flex: 1; font-family: monospace; background: #f8f9fa; padding: 2px 6px; border-radius: 3px; word-break: break-all; overflow-wrap: anywhere; white-space: pre-wrap; }
+                
+                .ai-reason { margin-top: 15px; padding: 10px; background: #e8f6f3; border-radius: 4px; border-left: 4px solid #1abc9c; color: #16a085; font-size: 0.9em; }
+                .remediation { margin-top: 10px; padding: 10px; background: #fff8e1; border-radius: 4px; border-left: 4px solid #f1c40f; color: #d35400; font-size: 0.9em; }
+                
+                .features { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px; }
+                .feature-tag { padding: 4px 10px; background: #ecf0f1; border-radius: 15px; font-size: 12px; color: #7f8c8d; }
+                
+                .exploit-box { margin-top: 12px; padding: 10px; border-left: 4px solid #e74c3c; border-radius: 4px; background: #fbfcff; font-family: 'Courier New', Courier, monospace; white-space: normal; }
+                .exploit-box.success { border-color: #e74c3c; }
+                .exploit-title { font-weight: bold; margin-bottom: 6px; color: #2c3e50; }
+                .exploit-list { margin: 6px 0 0 16px; padding: 0; }
+                .exploit-list li { margin: 2px 0; }
+                .exploit-empty { color: #7f8c8d; font-style: italic; }
+                .exploit-summary { margin: 20px 0; padding: 14px; border-left: 5px solid #e74c3c; background: #fefefe; border-radius: 5px; }
+                /* 证据盒样式：深色终端风格 */
+                .evidence-container { margin-top: 10px; padding: 12px; background: #1e1e1e; border-left: 5px solid #e74c3c; border-radius: 4px; color: #d4d4d4; }
+                .evidence-title { font-weight: bold; color: #ffffff; margin-bottom: 6px; font-size: 13px; border-bottom: 1px solid #333; padding-bottom: 4px; }
+                .evidence-content { font-family: 'Consolas', 'Monaco', monospace; font-size: 11px; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+                /* 证据盒样式：模拟终端输出感（深色） */
+                .evidence-container { margin-top: 15px; padding: 15px; background: #1e1e1e; border-left: 5px solid #e74c3c; border-radius: 4px; color: #d4d4d4; }
+                .evidence-title { font-weight: bold; color: #ffffff; margin-bottom: 8px; font-size: 14px; border-bottom: 1px solid #333; padding-bottom: 5px; }
+                .evidence-content { font-family: 'Consolas', 'Monaco', monospace; font-size: 12px; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+                .extra-note { margin-top: 8px; color: #8e44ad; font-size: 0.9em; }
+                pre { white-space: pre-wrap; word-wrap: break-word; background: #272822; color: #f8f8f2; padding: 10px; border-radius: 5px; }
+                .feature-guide { margin: 20px 0; background: #eef3ff; border: 1px solid #d6ddff; border-radius: 6px; padding: 12px; }
+                .feature-guide table { width: 100%; border-collapse: collapse; }
+                .feature-guide th, .feature-guide td { border: 1px solid #dde3f0; padding: 8px; font-size: 12px; text-align: left; }
+                .feature-guide th { background: #dde6ff; }
+                mark { background: #ffeaa7; padding: 2px; border-radius: 3px; }
+                /* AI 特征胶囊样式（深色胶囊） */
+                .feature-tag { display: inline-block; padding: 2px 8px; background: #34495e; color: #ecf0f1; border-radius: 10px; font-size: 11px; margin-right: 5px; margin-bottom: 5px; }
+                
+                .footer { text-align: center; margin-top: 40px; color: #bdc3c7; font-size: 0.9em; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>SAFS-Scanner AI 渗透报告</h1>
+                <p style="text-align: center; color: #7f8c8d;">扫描生成时间: 2025-12-30 16:51:18</p>
+                
+                <div class="summary">
+                    <div class="summary-stats">
+                        <div class="summary-item">
+                            <div>总探测点</div>
+                            <div class="summary-count">0</div>
+                        </div>
+                        <div class="summary-item">
+                            <div style="color: #e74c3c">高危</div>
+                            <div class="summary-count">0</div>
+                        </div>
+                        <div class="summary-item">
+                            <div style="color: #f39c12">疑似</div>
+                            <div class="summary-count">0</div>
+                        </div>
+                         <div class="summary-item">
+                            <div style="color: #27ae60">安全</div>
+                            <div class="summary-count">0</div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="riskChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="feature-guide">
+                    <strong>特征解释表：</strong>
+                    <table>
+                        <tr><th>特征</th><th>含义</th></tr>
+                        <tr><td>Length Diff</td><td>响应长度变化比例；大幅减少可能意味着异常重定向或错误页。</td></tr>
+                        <tr><td>Status Change</td><td>HTTP 状态码发生变化，可能触发 WAF 或异常处理。</td></tr>
+                        <tr><td>Time Delay</td><td>响应耗时增加；在 SQL 盲注/时间延迟探测中常见。</td></tr>
+                        <tr><td>Err Score</td><td>页面中出现数据库或错误关键字的得分。</td></tr>
+                        <tr><td>DOM Sim</td><td>与基线页面的 DOM 相似度；低值代表页面结构差异大。</td></tr>
+                        <tr><td>Reflect</td><td>Payload 在页面中的反射比例；低值可能是后端处理但仍存在风险。</td></tr>
+                    </table>
+                </div>
+
+                <div class="exploit-summary">
+                    <div class="exploit-title">Exploitation Result（全局利用成果）</div>
+                    
+                    <div class="exploit-empty">无成功利用证据</div>
+                    
+                    
+                </div>
+
+                
+                <div style="text-align: center; padding: 40px; color: #27ae60;">
+                    <h2>✅ 未发现明显安全漏洞</h2>
+                    <p>系统运行看似安全，但请保持警惕。</p>
+                </div>
+                
+
+                
+                
+                <div class="footer">
+                    Generated by SAFS-Scanner AI Engine
+                </div>
+            </div>
+            
+            <script>
+                var ctx = document.getElementById('riskChart').getContext('2d');
+                var riskChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Critical', 'Suspicious', 'Safe'],
+                        datasets: [{
+                            data: [0, 0, 0],
+                            backgroundColor: ['#e74c3c', '#f39c12', '#27ae60'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        animation: false,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        legend: { display: false }
+                    }
+                });
+            </script>
+        </body>
+        </html>
+        
