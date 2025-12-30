@@ -2,71 +2,35 @@
 
 ## 概述
 
-`core/mutator.py` 是 **ML-AdaptPentest** 框架中的 Payload 变异引擎。它的主要作用是接收一个原始的攻击载荷（Payload），通过多种混淆、编码和变形技术生成一系列变体（Mutations）。
-
-这些变体旨在绕过 Web 应用防火墙 (WAF) 或简单的输入过滤器，从而提高漏洞检测的成功率。该模块被设计为可迭代生成器，支持按优先级逐步产出变体，避免一次性生成过多无效载荷。
+`core/mutator.py` 是 V-APF 的 Payload 变异引擎。它接收原始载荷并按漏洞类型（SQLi/XSS/通用）执行混淆、编码和轻量变形，生成若干变体以绕过基础过滤或 WAF。默认 `count=3` 时返回“原始载荷 + 最多 3 个变体”。
 
 ## 功能特性
 
-1.  **大小写变形 (Case Flipping)**：
-    *   生成全小写、全大写以及大小写交替（如 `SeLeCt`）的变体，用于绕过区分大小写的关键词过滤。
-
-2.  **编码混淆 (Encoding Obfuscation)**：
-    *   **URL 编码**：对 Payload 进行一次或多次 URL 编码（如 `%27` 代替 `'`）。
-    *   **双重 URL 编码**：绕过只解码一次的过滤器。
-
-3.  **注释注入 (Comment Injection)**：
-    *   主要针对 SQL 注入，将空格替换为内联注释 `/**/`，干扰基于正则的关键词检测（如将 `UNION SELECT` 变为 `UNION/**/SELECT`）。
-
-4.  **空白字符变异 (Whitespace Variation)**：
-    *   使用 `+`、`%20` 或 `%09`（Tab）等不同形式替换空格，测试后端解析逻辑的差异。
-
-5.  **同形字符替换 (Homoglyph Substitution)**：
-    *   利用 Unicode 同形字（看起来一样但编码不同），将拉丁字母替换为西里尔字母等（如 `a` -> `а`）。这在某些宽字节处理不当的场景下可能绕过过滤。
-
-6.  **截断攻击 (Null Byte Injection)**：
-    *   在 Payload 末尾追加空字节 `\x00` 或 `%00`，尝试截断后端的文件路径或查询语句。
-
-7.  **随机组合策略**：
-    *   当基础策略用尽后，随机组合多种变换（如“先大写再 URL 编码”），探索更复杂的绕过路径。
+核心策略（按类型划分，内部随机选择，支持小概率二阶叠加）：
+- **SQLi**：空格→`/**/`、空格→`+`、`OR/AND`→`||/&&`、随机大小写、引号转义、`=`→` like `、前置随机注释。
+- **XSS**：标签大小写混淆、`alert`→`prompt/confirm`、URL 编码、`>` 拆分、`javascript:` 插入制表符、`onerror` 拆行。
+- **通用**：追加注释/空字节 `%00`、全量 URL 编码、尾部随机空格等。
 
 ## 实现细节
 
-### 核心类 `Mutator`
+### 核心类 `SAFSMutator`
 
-*   `__init__(self, max_attempts: int = 10)`:
-    *   初始化变异器，设置最大生成的变体数量限制，防止无限循环。
-
-*   `generate(self, payload: str)`:
-    *   这是一个生成器函数 (`yield`)，按以下顺序产出变体：
-        1.  **大小写变体**：`case_flip`。
-        2.  **URL 编码**：单次及双重编码。
-        3.  **注释注入**：`inject_comments`。
-        4.  **空白符变体**：`space_tab_variants`。
-        5.  **同形字**：`homoglyphs`。
-        6.  **截断字符**：空字节注入。
-        7.  **随机组合**：如果上述规则生成的数量未达到 `max_attempts`，则随机选取 1-3 种变换进行叠加。
-    *   内部维护一个 `seen` 集合，确保产出的变体不重复。
-
-### 辅助函数
-
-*   `case_flip(s)`: 返回小写、大写及交替大小写的字符串。
-*   `url_encode(s, times)`: 使用 `urllib.parse.quote` 进行编码。
-*   `inject_comments(s)`: 将空格替换为 `/**/` 或 `/* */`。
-*   `homoglyphs(s)`: 基于预定义的 `HOMOGLYPHS` 字典替换字符。
+* `mutate(self, base_payload, count=3)`：
+    * 基于关键词粗分类 SQLi/XSS/通用，选择对应策略随机生成变体；默认返回原始载荷 + 至多 `count` 个新变体。
+    * 使用 `set` 去重，最多尝试 `count*10` 次；有 30% 概率基于已有变体做二阶变换。
+* 兼容别名：`PayloadMutator = SAFSMutator`（供旧代码引用）。
 
 ## 使用示例
 
 ```python
-from core.mutator import Mutator
+from core.mutator import SAFSMutator
 
-# 初始化变异器，最多生成 5 个变体
-mutator = Mutator(max_attempts=5)
+mutator = SAFSMutator()
 original_payload = "' OR 1=1 -- "
 
 print(f"Original: {original_payload}")
 
-for i, variant in enumerate(mutator.generate(original_payload)):
+for i, variant in enumerate(mutator.mutate(original_payload, count=3)):
     print(f"Variant {i+1}: {variant}")
 ```
 
